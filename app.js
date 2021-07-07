@@ -6,8 +6,12 @@ const app = express()
 const port = 5000
 
 // Static Files
-app.use(express.static('public'))
-app.use('/css', express.static(__dirname + 'public/css'))
+app.use(express.static('/public/'))
+app.use('/style.css', express.static(__dirname + '/public/style.css'))
+app.use('/css', express.static(__dirname + '/public/css'))
+app.use('/fonts', express.static(__dirname + '/public/fonts'))
+app.use('/images', express.static(__dirname + '/public/images'))
+app.use('/js', express.static(__dirname + '/public/js'))
 
 // Set Templating Engine
 app.use(expressLayouts)
